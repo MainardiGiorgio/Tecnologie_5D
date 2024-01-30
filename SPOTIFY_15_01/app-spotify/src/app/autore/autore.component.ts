@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SpotifyService } from './spotify.service';
+import { SpotifyService } from '../spotify.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-autore',
+  templateUrl: './autore.component.html',
+  styleUrls: ['./autore.component.css']
 })
-
-export class AppComponent {
+export class AutoreComponent {
   title = 'app-spotify';
   query: string;
   obsTrack: Observable<Object>;
@@ -23,7 +22,7 @@ export class AppComponent {
       return;
     }
     this.query = query.value;
-    this.obsTrack = this.spotify.searchTrack(this.query);
+    this.obsTrack = this.spotify.searchAuthor(this.query);
     this.obsTrack.subscribe((data) => this.results = data); 
   }
 }

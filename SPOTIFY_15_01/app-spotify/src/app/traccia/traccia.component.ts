@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SpotifyService } from './spotify.service';
+import { SpotifyService } from '../spotify.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-traccia',
+  templateUrl: './traccia.component.html',
+  styleUrls: ['./traccia.component.css']
 })
-
-export class AppComponent {
+export class TracciaComponent {
   title = 'app-spotify';
   query: string;
   obsTrack: Observable<Object>;
   results: any;
-
   constructor(public spotify: SpotifyService) {
    
   }
