@@ -1,4 +1,4 @@
-iimport { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TracciaComponent } from './traccia/traccia.component';
 import { AlbumComponent } from './album/album.component';
